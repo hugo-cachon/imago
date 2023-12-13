@@ -3,6 +3,7 @@ import type { RcFile, UploadProps } from 'antd/es/upload';
 import type { UploadFile } from 'antd/es/upload/interface';
 import { InboxOutlined } from '@ant-design/icons';
 import React, {useState} from "react";
+import '../style/ImageUploader.css';
 
 const { Dragger } = Upload;
 
@@ -65,7 +66,6 @@ const ImageUploader: React.FC = () => {
         onDrop(e) {
             console.log('Dropped files', e.dataTransfer.files);
         },
-        listType: "picture-card",
         onChange: handleChange,
         onPreview: handlePreview,
         onRemove: (file) => {
@@ -84,6 +84,8 @@ const ImageUploader: React.FC = () => {
 
     return (
         <>
+            <div className={'image-uploader-container'}>
+                <div>
             <Modal open={previewOpen} title={previewTitle} footer={null} onCancel={handleCancel}>
                 <img alt="example" style={{ width: '100%' }} src={previewImage} />
             </Modal>
@@ -106,6 +108,17 @@ const ImageUploader: React.FC = () => {
             >
                 {uploading ? 'Uploading' : 'Start Upload'}
             </Button>
+            </div>
+            <div>
+            <Upload
+                listType="picture-card"
+                fileList={fileList}
+                onPreview={handlePreview}
+                onChange={handleChange}
+            >
+            </Upload>
+            </div>
+            </div>
         </>
     );
 };

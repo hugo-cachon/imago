@@ -17,7 +17,7 @@ const items: MenuProps['items'] = [
         icon: <FolderOutlined />,
     },
     {
-        label: <Link to={'/dashboard'}>Workspace</Link>,
+        label: <Link to={'/workspace'}>Workspace</Link>,
         key: 'Workspace',
         icon: <ExperimentOutlined />,
     },

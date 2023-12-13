@@ -7,6 +7,9 @@ import Dashboard from "./routes/dashboard";
 import Root from "./routes/root";
 import Settings from "./routes/settings";
 import Header from "./components/Header";
+import Workspace from "./routes/workspace";
+import Edit from "./routes/edit";
+import Workspace2 from "./routes/workspace";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +23,20 @@ const router = createBrowserRouter([
     {
         path: "/settings",
         element: <Settings/>
+    },
+    {
+        path: "/workspace",
+        element: <Workspace/>
+    }
+    ,
+    {
+        path: "/workspace/edit",
+        element: <Edit />
+    }
+    ,
+    {
+        path: "/workspace2",
+        element: <Workspace2 />
     }
 ])
 

@@ -1,0 +1,29 @@
+.upload-form-container {
+    color: rgba(0, 0, 0, 0.88);
+    max-width: 100dvw;
+    width: 100dvw;
+    height: 80dvh;
+}
+
+.data-entry {
+    width: 50dvw;
+    display: flex;
+    justify-content: center;
+}
+
+.data-entry > form {
+    width: 80%;
+}
+.image-upload {
+    width: 50dvw;
+}
+.ant-upload-list .ant-upload-list-picture-card {
+
+
+}
+
+.upload-form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
