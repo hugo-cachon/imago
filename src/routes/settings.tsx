@@ -4,7 +4,6 @@ import StorageStatistics from "../components/StorageStatistics";
 export default function Settings() {
     return(
         <>
-            <Header/>
             <StorageStatistics/>
         </>
     )

@@ -14,30 +14,27 @@ import Workspace2 from "./routes/workspace";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root />
+        element: <Root/>,
+        children: [
+            {
+                path: "dashboard",
+                element: <Dashboard/>
+            },
+            {
+                path: "workspace",
+                element: <Workspace/>
+            },
+            {
+                path: "settings",
+                element: <Settings/>
+            },
+            {
+                path: "/workspace/edit",
+                element: <Edit />
+            }
+        ]
     },
-    {
-        path: "/dashboard",
-        element: <Dashboard />
-    },
-    {
-        path: "/settings",
-        element: <Settings/>
-    },
-    {
-        path: "/workspace",
-        element: <Workspace/>
-    }
-    ,
-    {
-        path: "/workspace/edit",
-        element: <Edit />
-    }
-    ,
-    {
-        path: "/workspace2",
-        element: <Workspace2 />
-    }
+
 ])
 
 const root = ReactDOM.createRoot(

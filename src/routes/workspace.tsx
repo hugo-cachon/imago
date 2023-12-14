@@ -4,6 +4,7 @@ import type { TableColumnsType } from 'antd';
 import {Badge, Dropdown, Popconfirm, Space, Table} from 'antd';
 import Header from "../components/Header";
 import {render} from "react-dom";
+import {Link, Outlet } from 'react-router-dom';
 
 interface DataType {
     key: React.Key;
@@ -44,7 +45,7 @@ const App: React.FC = () => {
             render: (_, record) => (
                 <Space size="middle">
                     <a>View Online</a>
-                    <a>Edit</a>
+                    <Link to={'edit'}>Edit</Link>
                     <a>Set Online</a>
                     <Popconfirm
                         title="Are you sure delete this record?"
@@ -73,7 +74,6 @@ const App: React.FC = () => {
 
     return (
         <>
-            <Header />
             <Table
                 bordered={true}
                 pagination={false}
